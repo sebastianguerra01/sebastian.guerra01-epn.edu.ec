@@ -10,6 +10,8 @@ import DataAccess.sgUsuariosDAC;
 import Framework.AppException;
 
 
+// Clase por la cual podemos interactuar entre capas de desarrollo
+
 public class sgUsuariosBL {
 
     public List<sgUsers> sgGetAllUsuarios() throws AppException {

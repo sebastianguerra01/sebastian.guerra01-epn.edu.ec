@@ -1,5 +1,5 @@
-DB_NAME=Usuarios.db
-DB_PATH=data
-url_DataBase=jdbc:sqlite:data\\Usuarios.db
+DB_NAME= Usuarios.db
+DB_PATH= data
+url_DataBase= jdbc:sqlite:data\\Usuarios.db
 
 

@@ -8,6 +8,9 @@ import java.sql.SQLException;
 import Framework.AppConfiguration;
 import Framework.AppException;
 
+
+// Trae la informacion de la base de datos a la capa de desarrollo siguiente
+
 public class sgUsuariosDAC extends sgSQLiteDataHelper {
 
         public sgUsuariosDAC() {

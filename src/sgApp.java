@@ -1,10 +1,5 @@
-import java.util.List;
-import java.util.ArrayList;
-import BusinessLogic.sgUsuariosBL;
+import Framework.AppException;
 import UserInterface.*;
-
-import BusinessLogic.Entities.sgUsers;
-import pkUtilitario.sgHandleInOutput;
 
 public class sgApp {
 
@@ -15,7 +10,7 @@ public class sgApp {
     public static void main(String[] args) throws Exception {
 
         sgLogin login = new sgLogin();
-        login.setVisible(true); // muestra la ventana
+        login.setVisible(true);
         } 
 
 }

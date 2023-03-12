@@ -1,5 +1,7 @@
 package BusinessLogic.Entities;
 
+// Creamos la entidad que nos permite el contacto con la base de datos
+
 public class sgUsers {
     String sgUsuarios;
     String sgContrasena;

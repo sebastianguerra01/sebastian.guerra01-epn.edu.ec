@@ -7,6 +7,7 @@ import BusinessLogic.*;
 import BusinessLogic.Entities.sgUsers;
 import Framework.AppException;
 
+// Ventana que muestra el Login del Usuario
 
 public class sgLogin extends JFrame implements ActionListener {
     

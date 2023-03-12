@@ -1,5 +1,8 @@
 package Framework;
 
+
+// Controla las excepciones que nos podamos encontrar
+
 public class AppException extends Exception  {
 
     public AppException(Throwable cause, Object className, String message) {

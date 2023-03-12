@@ -14,7 +14,7 @@ import java.sql.Statement;
  * <b> SQLiteDataHelper, </b> permite la gestion y el acceso a los datos a una base de datos SQLite3
  */
 public abstract class sgSQLiteDataHelper {
-    private static String DBPathConnection = null;
+    private static String DBPathConnection = "jdbc:sqlite:data\\Usuarios.db";
     private static Connection conn = null;
     public sgSQLiteDataHelper(String  dbPathConnection){
         // Definir la cadena de conneccion : jdbc:sqlite:data\\TinderPet.db
@@ -46,9 +46,9 @@ public abstract class sgSQLiteDataHelper {
         Statement  stmt = null;
         ResultSet  rs   = null;
        // try {
-            conn = getConnection();            // jdbc:sqlite:data\\TinderPet.db 
-            stmt = conn.createStatement();     // CRUD : select * ...
-            rs   = stmt.executeQuery(sql);     //
+            conn = getConnection();             
+            stmt = conn.createStatement();     
+            rs   = stmt.executeQuery(sql);     
         return rs;
     }
 }
