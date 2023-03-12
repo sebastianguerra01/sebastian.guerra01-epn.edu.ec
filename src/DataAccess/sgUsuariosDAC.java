@@ -14,14 +14,32 @@ public class sgUsuariosDAC extends sgSQLiteDataHelper {
             super(AppConfiguration.getDBPathConnection());
         }
     
-        public static ResultSet sgGetAllUsuarios() {
-            String sql = "SELECT * FROM USUARIOS_REGISTRADOS ";
-            try (ResultSet rs = getResultSet(sql)) {
+        public ResultSet sgGetAllUsuarios() throws AppException{
+            try
+            {
+                String sql = "SELECT * FROM USUARIOS_REGISTRADOS ";
+
                 return getResultSet(sql);
-            } catch (SQLException e) {
+            } catch (SQLException e) 
+            {
                 System.out.println(e.getMessage());
             }
             return null;
+        }
+
+        public ResultSet getUserComper(String User) throws AppException { 
+            try {
+                String sql = "SELECT USUARIOS"
+                            +"FROM USUARIOS_REGISTRADOS"
+                            +"WHERE USUARIOS LIKE ? ";    
+                Connection conn = getConnection();
+                PreparedStatement pstmt  = conn.prepareStatement(sql);
+                pstmt.setString(1, "%" + User.trim() + "%");
+                return pstmt.executeQuery();
+            } 
+            catch (SQLException e) {
+                throw new AppException(e, getClass());
+            }
         }
     
     }
