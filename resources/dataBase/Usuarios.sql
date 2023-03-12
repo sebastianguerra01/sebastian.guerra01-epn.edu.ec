@@ -11,11 +11,10 @@ Version 1.0
 .show
 .tables
 
-DROP TABLE IF EXISTS USUARIOS_REGISTRADOS;
-
 CREATE TABLE IF NOT EXISTS USUARIOS_REGISTRADOS
 (    USUARIO            VARCHAR(75) NOT NULL 
     ,CONTRASENA         VARCHAR(10) NOT NULL
+    ,FECHA_CREACION      VARCHAR(20) DEFAULT(datetime('now'))
 );
 
 ------------------------------------------------------------------------

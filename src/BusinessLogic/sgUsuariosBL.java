@@ -11,7 +11,7 @@ import Framework.AppException;
 
 public class sgUsuariosBL {
 
-    public ArrayList<sgUsers> getAllUsuarios() throws AppException {
+    public ArrayList<sgUsers> sgGetAllUsuarios() throws AppException {
         try {
             sgUsuariosDAC sgUser = new sgUsuariosDAC();
 
