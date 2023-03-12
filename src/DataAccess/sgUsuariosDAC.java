@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import Framework.AppConfiguration;
 import Framework.AppException;
 
-public class sgUsuariosDAC extends SQLiteDataHelper {
+public class sgUsuariosDAC extends sgSQLiteDataHelper {
 
         public sgUsuariosDAC() {
             super(AppConfiguration.getDBPathConnection());
