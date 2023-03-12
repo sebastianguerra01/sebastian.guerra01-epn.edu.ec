@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.ArrayList;
 import BusinessLogic.sgUsuariosBL;
 
-import BusinessLogic.Entities.Users;
+import BusinessLogic.Entities.sgUsers;
 import utilitario.HandleInOutput;
 
 public class App {
@@ -13,27 +13,29 @@ public class App {
     
     public static void main(String[] args) throws Exception {
 
-        List<Users> usuarios = new ArrayList<Users>();
+        List<sgUsers> usuarios = new ArrayList<sgUsers>();
 
         sgLogin(usuarios);
     }
 
-    public static void sgLogin(List<Users> users)
+    public static void sgLogin(List<sgUsers> users)
     {
         int sgIntentos = 3;
         do
         {
             System.out.println("\n\n \t\t ........................ ");
             String u = HandleInOutput.getCaracteres  ("\t\t +  usuario: ");
-            String c = u + HandleInOutput.getCaracteres  ("\t\t +  clave  : ");
+            String c = HandleInOutput.getCaracteres  ("\t\t +  clave  : ");
             System.out.println("\t\t ........................ ");
-            for (Users uc : users) 
-                if( u.equals(users) )
-                {
+            for (sgUsers sgU : users) 
+                if( u.equals("profe") || u.equals("sebastian.guerra01@epn.edu.ec") || u.equals("gustavogeurra.1999@gmail.com")){
+                    if(c.equals("1234") || c.equals("1756168058") || c.equals("0400692380"))
+                    {
                     SGUSER = u.toUpperCase();
                     System.out.println("\n :: Bienvenido "+ SGUSER);
-                    ;
-                }
+                    }
+                } 
+                    
             System.out.println("\t\t * Nro de intentos: "+ --sgIntentos );
         } while (sgIntentos > 0);
         System.out.println("\n\n \t :(  Lo sentimos tu usuario y clave son incorrectos..! " );
