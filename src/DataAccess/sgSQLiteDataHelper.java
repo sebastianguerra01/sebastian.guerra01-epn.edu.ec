@@ -14,19 +14,19 @@ import java.sql.Statement;
  * <b> SQLiteDataHelper, </b> permite la gestion y el acceso a los datos a una base de datos SQLite3
  */
 public abstract class sgSQLiteDataHelper {
-    private static String DBPathConnection = "jdbc:sqlite:data\\Usuarios.db";
+    private static String sgDBPathConnection = "jdbc:sqlite:data\\Usuarios.db";
     private static Connection conn = null;
     public sgSQLiteDataHelper(String  dbPathConnection){
-        // Definir la cadena de conneccion : jdbc:sqlite:data\\TinderPet.db
+        
         if (!dbPathConnection.isEmpty())
-            sgSQLiteDataHelper.DBPathConnection = "jdbc:sqlite:data\\Usuarios.db";
+            sgSQLiteDataHelper.sgDBPathConnection = "jdbc:sqlite:data\\Usuarios.db";
     }
     /**
      * getDBConnection, obtiene el cadena de coneccion a la base de datos
      * @return
      */
     protected String getDBConnection() {
-        return DBPathConnection;
+        return sgDBPathConnection;
     }
 
     /**
@@ -36,7 +36,7 @@ public abstract class sgSQLiteDataHelper {
      */
     protected static Connection getConnection() throws SQLException{
         if(conn == null)
-            conn = DriverManager.getConnection(DBPathConnection);
+            conn = DriverManager.getConnection(sgDBPathConnection);
         return conn;
     }
 

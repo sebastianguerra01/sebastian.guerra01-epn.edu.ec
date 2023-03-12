@@ -3,6 +3,8 @@ import UserInterface.*;
 
 public class sgApp {
 
+    // Clase principal donde se ejecuta el programa 
+
     public static String SGNOMBRE_COMPLETO = "Sebastian Tadeo Guerra Ceron";
     public static String SGCEDULA = "1756168058"; 
     public static String SGUSER;

@@ -1,7 +1,7 @@
-/* Copyright (C) 2K23, pat_mic
+/* Copyright (C) 2K23, sebastian.guerra01@epn.edu.ec
 ------------------------------
-Creacion de la tabla Localidad con datos
-30.ene.2k23
+Creacion de la tabla Usuarios_Registrados con datos
+12.marzo.2023
 Version 1.0
 */
 

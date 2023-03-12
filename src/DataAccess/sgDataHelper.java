@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataHelper {
+public class sgDataHelper {
   private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
   private static final String DB_CONNECTION = "jdbc:mysql://hostname:port/Usuarios.db";
   private static final String DB_USER = "username";
   private static final String DB_PASSWORD = "password";
 
-  public static Connection getConnection() {
+  public static Connection sgGetConnection() {
     Connection connection = null;
     try {
       Class.forName(DB_DRIVER);
